@@ -1,5 +1,5 @@
 var totalItem = 0;
-var inputon = false;
+var inputon = true;
 
 $("#addButton").on("click", function () {
     if (inputon == false) {
@@ -9,27 +9,25 @@ $("#addButton").on("click", function () {
         $(".input-group").remove();
     }
     inputon = inputon == false ? true : false;
-
-    $("#givenInput").keypress(function (event) {
-        if (event.which === 13) {
-            var input = $("#givenInput").val();
-            if (input != "") {
-                // add new div 
-                addToDo(input);
-                $("#givenInput").val("");
-            }
-        }
-    });
 });
+
+$(".mainContent").on("keypress" ,$("#givenInput") ,function (event) {
+    if (event.which === 13) {
+        var input = $("#givenInput").val();
+        if (input != "") {
+            // add new div 
+            addToDo(input);
+            $("#givenInput").val("");
+        }
+    }
+} ) ;
 
 function addToDo(input) {
     totalItem++;
     $(".allList").append('<div class="listItem" ' + 'id="listNum' + totalItem + '"><div class="deleteButton"><i class="fas fa-trash-alt"></i></div><div class="textItem">' + input + '</div></div>');
 
 
-    $(".textItem").on("click", function () {
-        $(this).toggleClass('ketedao');
-    });
+    
     $(".deleteButton").on("click", function () {
         $(this).parent().remove();
     });
@@ -47,3 +45,6 @@ function addToDo(input) {
 
 
 }
+$(".listItem").on("click", $(".textitem") ,function () {
+    $(this).toggleClass('ketedao');
+});

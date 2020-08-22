@@ -14,23 +14,38 @@ body {
     margin          : 10% auto;
     background-color: royalblue;
     color           : white;
-    padding         : 10px;
     max-width       : 400px;
+    width: 100%;
+    
 }
 
+.blck {
+    width : 100% ;
+    
+    background-color: royalblue;
+}
 .title {
     font-size  : 15px;
     font-weight: bold;
     font-family: 'Alata', sans-serif;
+    display: inline-block;
 }
-
+    
 #addButton {
-    color: white;
-
+    color: white ;
+    font-weight : bold;
+    float: right;
 }
-
-.input-group {
+#givenInput{
+    width: 100%;
+    padding: 5px;
+    margin: 0;
     margin-top: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;        
 }
 
 .allList {

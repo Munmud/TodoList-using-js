@@ -9,24 +9,36 @@
 
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/fontawesome.min.css">
+  <script src="https://kit.fontawesome.com/d97fd8f09b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css">
-  <title>Untitled</title>
+  <title>To do list</title>
 </head>
 
 <body>
 
-  <div class="mainContent row">
-    <div class="title col-sm-11">To-Do-List</div>
-    <div class="col-sm-1"><a id="addButton">+</i></a></div>
+  <div class="mainContent">
+    <div class=" blck">
+          <div class="title">To-Do-List</div>
+          <a id="addButton">
+            <i class="fas fa-plus"></i>
+          </a>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" id="givenInput">
+    </div>
 
 
 
     <div class="allList">
 
+      <div class="listItem"  >
+        <div class="deleteButton">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="textItem">' + input + '</div>
+      </div>
 
 
 
