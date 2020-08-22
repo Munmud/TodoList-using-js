@@ -35,6 +35,7 @@ $("ul").on("click", "li" ,function () {
 });
 
 $("ul").on( "click" , "span" , function (event) {
-    $(this).parent().remove();
+    $(this).parent().remove() ;
+    
 } ) ;
 
