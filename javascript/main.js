@@ -1,6 +1,7 @@
 var totalItem = 0;
 var inputon = true;
 
+
 $("#addButton").on("click", function () {
     if (inputon == false) {
         $(".allList").before('<div class="input-group"><input type="text" class="form-control" id="givenInput"></div>');
@@ -11,7 +12,7 @@ $("#addButton").on("click", function () {
     inputon = inputon == false ? true : false;
 });
 
-$(".mainContent").on("keypress" ,$("#givenInput") ,function (event) {
+$(".mainContent").on("keypress" ,"#givenInput" ,function (event) {
     if (event.which === 13) {
         var input = $("#givenInput").val();
         if (input != "") {
@@ -24,27 +25,16 @@ $(".mainContent").on("keypress" ,$("#givenInput") ,function (event) {
 
 function addToDo(input) {
     totalItem++;
-    $(".allList").append('<div class="listItem" ' + 'id="listNum' + totalItem + '"><div class="deleteButton"><i class="fas fa-trash-alt"></i></div><div class="textItem">' + input + '</div></div>');
-
-
-    
-    $(".deleteButton").on("click", function () {
-        $(this).parent().remove();
-    });
-
-
-    // list-item mouseOver
-    $(".listItem").on("mouseover", function () {
-        $(this).find(".deleteButton").css("display", "block");
-    });
-    $(".listItem").on("mouseleave", function () {
-        $(this).find(".deleteButton").css("display", "none");
-    });
-
-    //textItem
+    $("ul").append('<li class="textItem"> <span class="deleteButton"><i class="fas fa-trash"></i></span>'+ input + '</li>') ;
 
 
 }
-$(".listItem").on("click", $(".textitem") ,function () {
+
+$("ul").on("click", "li" ,function () {
     $(this).toggleClass('ketedao');
 });
+
+$("ul").on( "click" , "span" , function (event) {
+    $(this).parent().remove();
+} ) ;
+

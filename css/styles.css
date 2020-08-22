@@ -15,63 +15,81 @@ body {
     background-color: royalblue;
     color           : white;
     max-width       : 400px;
-    width: 100%;
-    
+    width           : 100%;
+
 }
 
 .blck {
-    width : 100% ;
-    
+    width: 100%;
     background-color: royalblue;
 }
+
 .title {
     font-size  : 15px;
     font-weight: bold;
     font-family: 'Alata', sans-serif;
-    display: inline-block;
+    display    : inline-block;
+    padding : 10px ;
 }
-    
+
 #addButton {
-    color: white ;
-    font-weight : bold;
-    float: right;
-}
-#givenInput{
-    width: 100%;
-    padding: 5px;
-    margin: 0;
-    margin-top: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;        
+    color      : white;
+    font-weight: bold;
+    float      : right;
+    padding : 10px ;
 }
 
-.allList {
-    display   : block;
-    width     : 385px;
-    text-align: center;
-    margin    : 15px 0px auto;
+input {
+    font-size       : 18px;
+    color           : #2980b9;
+    background-color: #f7f7f7;
+    width           : 100%;
+    padding         : 13px 13px 13px 20px;
+    box-sizing      : border-box;
+    border          : 3px solid rgba(0, 0, 0, 0);
 }
 
-.deleteButton {
-    color           : red;
-    border          : 5px solid royalblue;
-    background-color: white;
-    width           : 30px;
-    float           : left;
-    display         : none;
+input:focus {
+    background: #fff;
+    border    : 3px solid royalblue;
+    outline   : none;
 }
 
-.textItem {
+ul {
+    list-style-type: none;
+    margin         : 0;
+    padding        : 0;
+    font-family: 'Alata', sans-serif;
+}
+
+li {
     color           : black;
-    padding         : 5px;
-    padding-left    : 35px;
-    background-color: white;
-    width           : 380px;
-    margin-bottom   : 10px;
+    background-color: rgb(231, 222, 222);
 }
+
+li:nth-of-type(2n) {
+    background-color: white;
+}
+
+li span {
+    background: #e74c3c;
+    height: 35px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+    padding-top: 10px;
+}
+
+li:hover span {
+    width  : 40px;
+    opacity: 1.0;
+}
+
+
 
 .ketedao {
     text-decoration: line-through;
