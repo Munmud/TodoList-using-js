@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image   : url(https://www.teahub.io/photos/full/8-80307_blur-full-hd-backgrounds.jpg);
+    background-size    : cover;
+    background-position: center;
+}
+
+.mainContent {
+    margin          : 10% auto;
+    background-color: royalblue;
+    color           : white;
+    padding         : 10px;
+    max-width       : 400px;
+}
+
+.title {
+    font-size  : 15px;
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
+}
+
+#addButton {
+    color: white;
+
+}
+
+.input-group {
+    margin-top: 10px;
+}
+
+.allList {
+    display   : block;
+    width     : 385px;
+    text-align: center;
+    margin    : 15px 0px auto;
+}
+
+.deleteButton {
+    color           : red;
+    border          : 5px solid royalblue;
+    background-color: white;
+    width           : 30px;
+    float           : left;
+    display         : none;
+}
+
+.textItem {
+    color           : black;
+    padding         : 5px;
+    padding-left    : 35px;
+    background-color: white;
+    width           : 380px;
+    margin-bottom   : 10px;
+}
+
+.ketedao {
+    text-decoration: line-through;
+    color          : darkgray;
+}
