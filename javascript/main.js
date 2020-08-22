@@ -4,7 +4,7 @@ var inputon = true;
 
 $("#addButton").on("click", function () {
     if (inputon == false) {
-        $(".allList").before('<div class="input-group"><input type="text" class="form-control" id="givenInput"></div>');
+        $(".allList").before('<div class="input-group"><input type="text" class="form-control" id="givenInput" placeholder="Add new todo"></div>');
     }
     else {
         $(".input-group").remove();
